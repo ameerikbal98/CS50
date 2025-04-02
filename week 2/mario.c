@@ -1,4 +1,4 @@
-#include "cs50/cs50.h"
+//#include "cs50/cs50.h"
 #include <stdio.h>
 
 
@@ -12,12 +12,15 @@ In a file called mario.c in a folder called mario-more, implement a program in C
 
 And let’s allow the user to decide just how tall the pyramids should be by first prompting them for a positive int between, say, 1 and 8, inclusive.
 */
+
+
 int main()
 {
     int n;
     do
     {
-        n = get_int("Height: ");
+        //n = get_int("Height: ");
+        n = 5;
     }
     while (n < 1 || n > 8);
 
@@ -26,7 +29,7 @@ int main()
     {
         int j = 0;
         while (j < (2 * (n + 1))) // execute a pyramid's width which is 2 times the pyramid
-                                  // hight + 1 accounting the space between the pyramids
+                                  // height + 1 accounting the space between the pyramids
         {
             if ((j <= left_bound - 1 && j >= left_bound - 1 - i) ||
                 (j >= right_bound - 1 &&
